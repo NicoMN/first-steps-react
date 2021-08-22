@@ -1,10 +1,15 @@
-function Todo() {
+function Todo(props) {
+  function deleteHandler() {
+    console.log("Click!");
+  }
+
   return (
     <div className="card">
-      <h2>TITLE</h2>
+      <h2>{props.text}</h2>
       <div className="actions">
-          <span>It's a Span.</span>
-        <button className="btn">Delete</button>
+        <button className="btn" onClick={deleteHandler}>
+          Delete
+        </button>
       </div>
     </div>
   );
